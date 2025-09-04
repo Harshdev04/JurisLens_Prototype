@@ -10,7 +10,10 @@ export default function SiteHeader() {
         <Link to="/" className="flex items-center gap-2">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-primary to-violet-600 text-white shadow-sm">
             <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-              <path d="M4 12c0-4.418 3.582-8 8-8 1.77 0 3.405.574 4.72 1.54l-2.04 2.04A5.97 5.97 0 0 0 12 6C8.686 6 6 8.686 6 12s2.686 6 6 6a5.97 5.97 0 0 0 5.58-3.68l2.04 2.04A7.963 7.963 0 0 1 12 20c-4.418 0-8-3.582-8-8Z" fill="currentColor" />
+              <path
+                d="M4 12c0-4.418 3.582-8 8-8 1.77 0 3.405.574 4.72 1.54l-2.04 2.04A5.97 5.97 0 0 0 12 6C8.686 6 6 8.686 6 12s2.686 6 6 6a5.97 5.97 0 0 0 5.58-3.68l2.04 2.04A7.963 7.963 0 0 1 12 20c-4.418 0-8-3.582-8-8Z"
+                fill="currentColor"
+              />
             </svg>
           </span>
           <span className="text-lg font-bold tracking-tight">JurisLens</span>

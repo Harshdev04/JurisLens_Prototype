@@ -22,7 +22,10 @@ function analyze(text: string) {
   const risks = [
     { key: "perpetual", label: "Perpetual obligations" },
     { key: "irrevocable", label: "Irrevocable license or rights" },
-    { key: "sole discretion", label: "Counterparty operates at sole discretion" },
+    {
+      key: "sole discretion",
+      label: "Counterparty operates at sole discretion",
+    },
     { key: "without notice", label: "Changes or termination without notice" },
     { key: "limitation of liability", label: "Limitation of liability" },
     { key: "liability is limited", label: "Liability limitation" },
@@ -101,16 +104,30 @@ export default function Index() {
             </span>
             <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
               Generative AI for Demystifying
-              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-500 bg-clip-text text-transparent"> Legal Documents</span>
+              <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-500 bg-clip-text text-transparent">
+                {" "}
+                Legal Documents
+              </span>
             </h1>
             <p className="mt-4 max-w-prose text-lg text-muted-foreground">
-              JurisLens explains complex contracts in plain language, surfaces risks, and highlights the clauses that matter.
+              JurisLens explains complex contracts in plain language, surfaces
+              risks, and highlights the clauses that matter.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <Button size="lg" onClick={() => document.getElementById("analyze")?.scrollIntoView({ behavior: "smooth" })}>
+              <Button
+                size="lg"
+                onClick={() =>
+                  document
+                    .getElementById("analyze")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 Try it now
               </Button>
-              <a href="/playground" className="text-sm font-medium text-primary underline-offset-4 hover:underline">
+              <a
+                href="/playground"
+                className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+              >
                 Open playground
               </a>
             </div>
@@ -120,20 +137,29 @@ export default function Index() {
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-br from-primary to-violet-600 text-primary-foreground">
                   <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
-                    <path d="M4 12c0-4.418 3.582-8 8-8 1.77 0 3.405.574 4.72 1.54l-2.04 2.04A5.97 5.97 0 0 0 12 6C8.686 6 6 8.686 6 12s2.686 6 6 6a5.97 5.97 0 0 0 5.58-3.68l2.04 2.04A7.963 7.963 0 0 1 12 20c-4.418 0-8-3.582-8-8Z" fill="currentColor" />
+                    <path
+                      d="M4 12c0-4.418 3.582-8 8-8 1.77 0 3.405.574 4.72 1.54l-2.04 2.04A5.97 5.97 0 0 0 12 6C8.686 6 6 8.686 6 12s2.686 6 6 6a5.97 5.97 0 0 0 5.58-3.68l2.04 2.04A7.963 7.963 0 0 1 12 20c-4.418 0-8-3.582-8-8Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium">Instant contract insights</p>
-                  <p className="text-xs text-muted-foreground">Summary, key terms, risks & actions</p>
+                  <p className="text-sm font-medium">
+                    Instant contract insights
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Summary, key terms, risks & actions
+                  </p>
                 </div>
               </div>
               <div className="mt-4 grid gap-2 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" /> PII safe by default
+                  <span className="h-2 w-2 rounded-full bg-emerald-500" /> PII
+                  safe by default
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-blue-500" /> Exportable reports
+                  <span className="h-2 w-2 rounded-full bg-blue-500" />{" "}
+                  Exportable reports
                 </div>
               </div>
             </div>
@@ -144,18 +170,27 @@ export default function Index() {
       <section id="analyze" className="container mx-auto px-4 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Analyze any legal text</h2>
-            <p className="mt-2 text-muted-foreground">Paste text or upload a document to generate a plain-language report.</p>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Analyze any legal text
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              Paste text or upload a document to generate a plain-language
+              report.
+            </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
                 <CardTitle>Input</CardTitle>
-                <CardDescription>Supports pasted text and simple .txt uploads</CardDescription>
+                <CardDescription>
+                  Supports pasted text and simple .txt uploads
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <label className="block">
-                  <span className="mb-2 block text-sm font-medium">Upload a .txt file</span>
+                  <span className="mb-2 block text-sm font-medium">
+                    Upload a .txt file
+                  </span>
                   <Input
                     type="file"
                     accept=".txt"
@@ -166,10 +201,14 @@ export default function Index() {
                   />
                 </label>
                 {fileName ? (
-                  <p className="mt-2 text-xs text-muted-foreground">Loaded: {fileName}</p>
+                  <p className="mt-2 text-xs text-muted-foreground">
+                    Loaded: {fileName}
+                  </p>
                 ) : null}
                 <div className="mt-4">
-                  <span className="mb-2 block text-sm font-medium">Or paste text</span>
+                  <span className="mb-2 block text-sm font-medium">
+                    Or paste text
+                  </span>
                   <Textarea
                     value={text}
                     onChange={(e) => setText(e.target.value)}
@@ -177,8 +216,12 @@ export default function Index() {
                   />
                 </div>
                 <div className="mt-4 flex items-center justify-between gap-3">
-                  <span className="text-xs text-muted-foreground">Minimum ~40 characters</span>
-                  <Button onClick={onAnalyze} disabled={disabled}>Analyze</Button>
+                  <span className="text-xs text-muted-foreground">
+                    Minimum ~40 characters
+                  </span>
+                  <Button onClick={onAnalyze} disabled={disabled}>
+                    Analyze
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -186,7 +229,9 @@ export default function Index() {
             <Card>
               <CardHeader>
                 <CardTitle>Report</CardTitle>
-                <CardDescription>Human-friendly explanation generated from your input</CardDescription>
+                <CardDescription>
+                  Human-friendly explanation generated from your input
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 {result ? (
@@ -199,7 +244,9 @@ export default function Index() {
                         <TabsTrigger value="actions">Actions</TabsTrigger>
                       </TabsList>
                       <TabsContent value="summary">
-                        <p className="leading-relaxed">{result.summary || "No summary detected."}</p>
+                        <p className="leading-relaxed">
+                          {result.summary || "No summary detected."}
+                        </p>
                       </TabsContent>
                       <TabsContent value="terms">
                         <ul className="list-disc space-y-1 pl-5">
@@ -230,18 +277,22 @@ export default function Index() {
                     <div className="mt-6">
                       <Button
                         variant="secondary"
-                        onClick={() => downloadJSON("jurislens-report.json", result)}
+                        onClick={() =>
+                          downloadJSON("jurislens-report.json", result)
+                        }
                       >
                         Download JSON report
                       </Button>
                     </div>
                     <p className="mt-4 text-xs text-muted-foreground">
-                      This tool provides automated analysis to aid understanding and does not constitute legal advice.
+                      This tool provides automated analysis to aid understanding
+                      and does not constitute legal advice.
                     </p>
                   </div>
                 ) : (
                   <div className="rounded-md border border-dashed p-6 text-center text-sm text-muted-foreground">
-                    Run an analysis to see the summary, key terms, risks, and action items.
+                    Run an analysis to see the summary, key terms, risks, and
+                    action items.
                   </div>
                 )}
               </CardContent>
@@ -255,19 +306,22 @@ export default function Index() {
           <div>
             <h3 className="text-lg font-semibold">Accuracy you can trust</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Deterministic parsing highlights headings and common risk phrases while preserving your data locally.
+              Deterministic parsing highlights headings and common risk phrases
+              while preserving your data locally.
             </p>
           </div>
           <div>
             <h3 className="text-lg font-semibold">Secure by design</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Runs entirely in your browser for pasted text. Server APIs can be added for enterprise use cases.
+              Runs entirely in your browser for pasted text. Server APIs can be
+              added for enterprise use cases.
             </p>
           </div>
           <div>
             <h3 className="text-lg font-semibold">Exportable insights</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Download structured results to integrate with your workflows and review processes.
+              Download structured results to integrate with your workflows and
+              review processes.
             </p>
           </div>
         </div>

@@ -4,14 +4,11 @@ export default function SiteFooter() {
       <div className="container mx-auto px-4 py-10 text-sm text-muted-foreground">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p>
-            © {new Date().getFullYear()} JurisLens. Demystifying legal documents with AI.
+            © {new Date().getFullYear()} JurisLens. Demystifying legal
+            documents with AI.
           </p>
           <div className="flex items-center gap-4">
-            <a
-              href="/"
-              className="hover:text-foreground/80"
-              aria-label="Home"
-            >
+            <a href="/" className="hover:text-foreground/80" aria-label="Home">
               Home
             </a>
             <a

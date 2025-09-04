@@ -23,7 +23,15 @@ function analyze(text: string) {
 
   const keyTerms: string[] = [];
   const candidates = [
-    "Term", "Payment", "Confidential", "Liability", "Indemnification", "Termination", "Governing Law", "Arbitration", "Assignment",
+    "Term",
+    "Payment",
+    "Confidential",
+    "Liability",
+    "Indemnification",
+    "Termination",
+    "Governing Law",
+    "Arbitration",
+    "Assignment",
   ];
   for (const c of candidates) {
     const re = new RegExp(`\\b${c}\\b`, "i");
@@ -70,7 +78,10 @@ export default function Playground() {
                 <span className="text-xs text-muted-foreground">
                   Minimum ~40 characters
                 </span>
-                <Button disabled={disabled} onClick={() => setResult(analyze(input))}>
+                <Button
+                  disabled={disabled}
+                  onClick={() => setResult(analyze(input))}
+                >
                   Analyze
                 </Button>
               </div>
@@ -90,7 +101,9 @@ export default function Playground() {
                     <TabsTrigger value="actions">Actions</TabsTrigger>
                   </TabsList>
                   <TabsContent value="summary">
-                    <p className="leading-relaxed">{result.summary || "No summary found."}</p>
+                    <p className="leading-relaxed">
+                      {result.summary || "No summary found."}
+                    </p>
                   </TabsContent>
                   <TabsContent value="terms">
                     <ul className="list-disc space-y-1 pl-5">
@@ -119,7 +132,9 @@ export default function Playground() {
                   </TabsContent>
                 </Tabs>
               ) : (
-                <p className="text-muted-foreground">Run an analysis to see results.</p>
+                <p className="text-muted-foreground">
+                  Run an analysis to see results.
+                </p>
               )}
             </CardContent>
           </Card>
